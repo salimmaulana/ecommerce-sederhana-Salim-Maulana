@@ -1,0 +1,136 @@
+<!-- =========================
+FILE: kategori.html
+========================= -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kategori</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial;
+    }
+
+    body{
+      background:#f5f5f5;
+    }
+
+        header{
+            background-color: #222;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+    .logo{
+      font-size:24px;
+      font-weight:bold;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+    }
+
+    h1{
+      text-align:center;
+      margin:30px 0;
+    }
+
+    .kategori{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+      padding:20px;
+    }
+
+    .box{
+      width:220px;
+      background:white;
+      padding:30px;
+      text-align:center;
+      border-radius:10px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .box a{
+      text-decoration:none;
+      color:white;
+    }
+
+    .box button{
+      margin-top:15px;
+      padding:10px 20px;
+      border:none;
+      background:#222;
+      color:white;
+      border-radius:5px;
+      cursor:pointer;
+    }
+
+        footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">TOKOKU</div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="produk.html">Produk</a></li>
+      <li><a href="kategori.html">Kategori</a></li>
+      <li><a href="keranjang.html">Keranjang</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h1>Kategori Produk</h1>
+
+<div class="kategori">
+
+  <div class="box">
+    <h2>Makanan</h2>
+    <a href="produk.html">
+      <button>Lihat Produk</button>
+    </a>
+  </div>
+
+</div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Kontak: salimmaulana434@gmail.com | +62 896-4950-1030</p>
+        <p>&copy; 2026 WARTEH22. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
