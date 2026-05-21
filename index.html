@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARTEH22</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: #f5f5f5;
+        }
+
+        /* HEADER */
+        header{
+            background-color: #222;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo{
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        /* HERO SECTION */
+        .hero{
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content{
+            background-color: rgba(0,0,0,0.5);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .hero h1{
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero button{
+            padding: 10px 20px;
+            border: none;
+            background-color: orange;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* PRODUK */
+        .produk{
+            padding: 50px;
+            text-align: center;
+        }
+
+        .produk h2{
+            margin-bottom: 30px;
+        }
+
+        .produk-container{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card{
+            background: white;
+            width: 220px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .card img{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3{
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .harga{
+            color: green;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card button{
+            padding: 10px;
+            width: 100%;
+            border: none;
+            background-color: #222;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* FOOTER */
+        footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">WARTEH22</div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="kategori.html">Kategori</a></li>
+                <li><a href="keranjang.html">Keranjang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di WARTEH22</h1>
+            <p>Belanja mudah, cepat, dan murah</p>
+            <a href="produk.html">
+                <button>Lihat Produk</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- PRODUK UNGGULAN -->
+    <section class="produk">
+        <h2>Produk Unggulan</h2>
+
+        <div class="produk-container">
+
+            <div class="card">
+                <img src="Gambar\Cireng.jpeg" alt="Produk 1">
+                <h3>Cireng</h3>
+                <p class="harga">Rp250.000</p>
+                <button onclick="tambahKeranjang(
+      'Cireng',
+      250000,
+      'Gambar\\Cireng.jpeg'
+    )">
+      Tambah ke Keranjang
+    </button>
+            </div>
+
+            <div class="card">
+                <img src="Gambar\Kentang Sosis.jpeg" alt="Produk 2">
+                <h3>Kentang Sosis</h3>
+                <p class="harga">Rp300.000</p>
+                <button onclick="tambahKeranjang(
+      'Kentang Sosis',
+      300000,
+      'Gambar\\Kentang Sosis.jpeg'
+    )">
+      Tambah ke Keranjang
+    </button>
+            </div>
+
+            <div class="card">
+                <img src="Gambar\Nasgor.jpeg" alt="Produk 3">
+                <h3>Nasgor</h3>
+                <p class="harga">Rp180.000</p>
+                <button onclick="tambahKeranjang(
+      'Nasgor',
+      180000,
+      'Gambar\\Nasgor.jpeg'
+    )">
+      Tambah ke Keranjang
+          </button>
+            </div>
+
+            <div class="card">
+                <img src="Gambar\Pangsit.jpeg" alt="Produk 4">
+                <h3>Pangsit</h3>
+                <p class="harga">Rp450.000</p>
+                <button onclick="tambahKeranjang(
+      'Pangsit',
+      450000,
+      'Gambar\\Pangsit.jpeg'
+    )">
+             Tambah ke Keranjang
+            </button>
+            </div>
+        </div>
+    </section>
+<br><br><br><br><br>
+    <!-- FOOTER -->
+    <footer>
+        <p>Kontak: salimmaulana434@gmail.com | +62 896-4950-1030</p>
+        <p>&copy; 2026 WARTEH22. All Rights Reserved.</p>
+    </footer>
+<script>
+
+function tambahKeranjang(nama, harga, gambar){
+
+  let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+
+  let produk = {
+    nama: nama,
+    harga: harga,
+    gambar: gambar
+  };
+
+  keranjang.push(produk);
+
+  localStorage.setItem("keranjang", JSON.stringify(keranjang));
+
+  alert(nama + " berhasil masuk ke keranjang");
+
+}
+
+</script>
+</body>
+</html>
